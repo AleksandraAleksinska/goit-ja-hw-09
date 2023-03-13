@@ -8,18 +8,14 @@ function submitForm (event) {
   let {elements: { delay, step, amount }} = event.currentTarget;  
 
   const firstDelay = delay.value;
-  // console.log(firstDelay);
   const delayStep = step.value;
-  // console.log(delayStep);
   const numberOfPromises = amount.value;
-  // console.log(numberOfPromises);
 
-  for (let i = 0; i <numberOfPromises; i ++) {
+  for (let i = 1; i <= numberOfPromises; i ++) {
 
-    let position = i + 1;
-    const delay = Number(firstDelay) + delayStep * i;
-
-     
+    let position = i;
+    const delay = Number(firstDelay) + delayStep * (i-1);
+        
     function createPromise(position, delay) {
       const shouldResolve = Math.random() > 0.3;
       return new Promise ((resolve, reject) => {
