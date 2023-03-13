@@ -31,8 +31,7 @@ function submitForm (event) {
 
         }, delay)
       
-      })
-      
+      })  
     }
 
     createPromise(position, delay)
@@ -43,11 +42,7 @@ function submitForm (event) {
       console.log(`❌ Rejected promise ${position} in ${delay}ms`);
     });
   }
-  
-    
-  
-
-  }
+}
 
 
 
